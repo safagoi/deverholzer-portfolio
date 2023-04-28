@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import ProjectCard from '@/components/ProjectCard';
 import Head from 'next/head';
 
 export default function Home() {
@@ -13,7 +14,16 @@ export default function Home() {
 
       <Layout>
         <main>
-          
+          <div class="main-content">
+            <section class="side-projects">
+              <h3>Some of my side projects</h3>
+
+              <div class="project-list">
+
+                <ProjectCard />
+              </div>
+            </section>
+          </div>
         </main>
       </Layout>
     </>

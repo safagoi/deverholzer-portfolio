@@ -1,0 +1,25 @@
+button {
+    /* Button component styles */
+    padding: 0.45rem 0.75rem;
+    min-width: 5rem;
+    border: none;
+    background-color: $btn-bg-color;
+    color: $font-color;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.387);
+    transition: transform 0.3s ease-out;
+
+    &:hover {
+        background-color: $btn-bg-hover-color;
+        transform: translateY(-2px);
+    }
+}
+
+.button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0rem 0.75rem;
+}
