@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html,
+body,
+#__next,
+.Layout {
+    font-family: "Rubik";
+    height: 100%;
+    width: 100%;
+
+    // transition: all .2s ease-in-out; // Efecto transición colores de los temas
+}
+
+.Layout {
+    display: grid;
+    grid-template-rows: 10rem 1fr;
+    background-color: $bg-color;
+    color: $font-color;
+}
