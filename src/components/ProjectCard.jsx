@@ -1,4 +1,12 @@
+import Button from "./Button";
+
 export default function ProjectCard({project}) {
+
+    function onGithubButtonClick() {
+        window.open(project.repoUrl, '_blank')
+    }
+
+
     return (
         <div className="ProjectCard">
             <h5>{project.title}</h5>
@@ -12,9 +20,7 @@ export default function ProjectCard({project}) {
                         {project.content}
                     </p>
 
-                    <button className="button-icon button-github">
-                        <span>Go to GitHub</span>
-                    </button>
+                    <Button onClick={onGithubButtonClick}> Go to Github </Button>
                 </div>
             </div>
         </div>

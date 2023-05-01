@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import ProjectCard from '@/components/ProjectCard';
+import getProjects from '@/lib/getProjects';
 import Head from 'next/head';
 
 export default function Home({projects}) {
@@ -38,8 +39,7 @@ export default function Home({projects}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/projects");
-  const projects = await res.json();
+  const projects = getProjects();
 
   return {
     props: {
