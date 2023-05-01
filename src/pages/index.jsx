@@ -1,8 +1,10 @@
 import Layout from '@/components/Layout';
 import ProjectCard from '@/components/ProjectCard';
+import getProjects from '@/lib/getProjects';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Home({projects}) {
+
   return (
     <>
       <Head>
@@ -14,13 +16,19 @@ export default function Home() {
 
       <Layout>
         <main>
-          <div class="main-content">
-            <section class="side-projects">
+          <div className="main-content">
+            <section className="side-projects">
               <h3>Some of my side projects</h3>
 
-              <div class="project-list">
-
-                <ProjectCard />
+              <div className="project-list">
+                {
+                  projects.map(project => 
+                    <ProjectCard 
+                      project={project}
+                      key={project.id}
+                    />
+                  )
+                }
               </div>
             </section>
           </div>
@@ -28,4 +36,14 @@ export default function Home() {
       </Layout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const projects = getProjects();
+
+  return {
+    props: {
+      projects
+    }
+  }
 }
