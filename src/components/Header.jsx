@@ -1,3 +1,5 @@
+import ThemeChanger from "./ThemeChanger";
+
 export default function Header() {
 
     return (
@@ -7,9 +9,7 @@ export default function Header() {
                     <h1>deverholzer</h1>
                     <span>💻 web app development 💻</span>
                 </div>
-                <div>
-                    Tema
-                </div>
+                <ThemeChanger />
             </div>
         </header>
     )
