@@ -1,24 +1,27 @@
 import Sun from "../assets/sun-icon.svg";
 import Moon from "../assets/moon-icon.svg";
 
-import { useState } from "react";
+import { useMainContext } from "@/context/MainContext";
+
 
 export default function ThemeChanger() {
-    const [theme, setTheme] = useState('light');
+    // Obtener temas, tema actual y función para actualizar tema
+    // del MainContext
+    const {themes, theme, setTheme } = useMainContext();
 
-    function toogleTheme() {
-        if (theme === 'light') {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
+    // Cambio del estado tema al clickar sobre el icono
+    function handleOnclick() {
+        let currentIndex = themes.indexOf(theme);
+        let nextIndex = (currentIndex == 0 ? 1 : 0);
+
+        setTheme(themes[nextIndex]);
     }
-
+    
     return (
         <div className="ThemeChanger">
-            <div className="theme-changer-icon" onClick={toogleTheme}>
+            <div className="theme-changer-icon" onClick={handleOnclick}>
                 {
-                    theme === 'light' ?
+                    theme === 't-light' ?
                         <Moon width={36} height={36} />
                         :
                         <Sun width={36} height={36} />

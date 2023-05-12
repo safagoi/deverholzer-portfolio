@@ -38,6 +38,9 @@ export default function Home({projects}) {
   )
 }
 
+
+// Función asíncrona utilizada en Next.js para obtener los datos necesarios durante la generación estática de la página.
+// Esta función se ejecuta en el servidor y devuelve los datos necesarios para la página como props.
 export async function getStaticProps() {
   const projects = getProjects();
 

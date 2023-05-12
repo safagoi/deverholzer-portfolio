@@ -18,6 +18,6 @@ body,
 .Layout {
     display: grid;
     grid-template-rows: 10rem 1fr;
-    background-color: $bg-color;
-    color: $font-color;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
