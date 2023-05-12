@@ -5,7 +5,7 @@
     flex-direction: column;
     gap: 1rem;
     background-color: var(--project-card-bg-color);
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.387);
+    box-shadow: var(--project-card-shadow);
     border-radius: 10px;
     padding: 1rem;
     border: var(--project-card-border);
