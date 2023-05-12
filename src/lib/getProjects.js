@@ -1,3 +1,5 @@
+
+// Obtiene la lista de proyectos
 export default function getProjects() {
     return projects;
 }

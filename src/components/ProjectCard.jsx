@@ -2,6 +2,7 @@ import Button from "./Button";
 
 export default function ProjectCard({project}) {
 
+    // Abre url del proyecto
     function onGithubButtonClick() {
         window.open(project.repoUrl, '_blank')
     }

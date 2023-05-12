@@ -5,8 +5,11 @@ import { useMainContext } from "@/context/MainContext";
 
 
 export default function ThemeChanger() {
+    // Obtener temas, tema actual y función para actualizar tema
+    // del MainContext
     const {themes, theme, setTheme } = useMainContext();
 
+    // Cambio del estado tema al clickar sobre el icono
     function handleOnclick() {
         let currentIndex = themes.indexOf(theme);
         let nextIndex = (currentIndex == 0 ? 1 : 0);
@@ -14,16 +17,6 @@ export default function ThemeChanger() {
         setTheme(themes[nextIndex]);
     }
     
-    // const [theme, setTheme] = useState('light');
-
-    // function toogleTheme() {
-    //     if (theme === 'light') {
-    //         setTheme('dark');
-    //     } else {
-    //         setTheme('light');
-    //     }
-    // }
-
     return (
         <div className="ThemeChanger">
             <div className="theme-changer-icon" onClick={handleOnclick}>
