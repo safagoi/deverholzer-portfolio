@@ -7,3 +7,27 @@ $btn-bg-hover-color: #ffcd36;
 $project-card-bg-color: white;
 $project-card-border: none;
 $project-card-img-border: 1px solid rgb(212,202,202);
+
+.t-light {
+    --bg-color: #f5f5dc;
+    --font-color: #232222;
+
+    --btn-bg-color: #ffbf00;
+    --btn-bg-hover-color: #ffcd36;
+
+    --project-card-bg-color: white;
+    --project-card-border: none;
+    --project-card-img-border: 1px solid rgb(212, 202, 202);
+}
+
+.t-dark {
+    --bg-color: #101010;
+    --font-color: #f5f5f5;
+
+    --btn-bg-color: #ffcd36;
+    --btn-bg-hover-color: #ffbf00;
+
+    --project-card-bg-color: #101010;
+    --project-card-border: none;
+    --project-card-img-border: 1px solid #767676;
+}
