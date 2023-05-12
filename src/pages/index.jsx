@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import ProjectCard from '@/components/ProjectCard';
+import ScrollSpy from '@/components/ScrollSpy';
 import getProjects from '@/lib/getProjects';
 import Head from 'next/head';
 
@@ -17,6 +18,7 @@ export default function Home({projects}) {
       <Layout>
         <main>
           <div className="main-content">
+            
             <section className="side-projects">
               <h3>Some of my side projects</h3>
 
@@ -31,6 +33,15 @@ export default function Home({projects}) {
                 }
               </div>
             </section>
+
+            
+
+            <section className="other-section">
+              <p>Esto es otra sección</p>
+            </section>
+
+            {/* ScrollSpy */}
+            <ScrollSpy />
           </div>
         </main>
       </Layout>

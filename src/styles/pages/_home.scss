@@ -1,14 +1,24 @@
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
 
+    // HACIENDO SCROLLSPY- DOS SECCIONES SEGUIDAS SE SOLAPAN POR EL DISPLAY GRID
     .main-content {
         margin: 0 2rem;
-        flex: 1;
-        max-width: 60rem;
+        align-self: flex-start;
+        display: grid;
+        grid-template-areas: 
+            "side-projects scroll-spy"
+            "other-section scroll-spy"
+        ;
+        grid-template-columns: 0.9fr 0.1fr;
+        grid-template-rows: auto 400px;
+        row-gap: 1rem;
     }
 
     .side-projects {
+        grid-area: side-projects;
 
         h3 {
             font-size: 1.6rem;
@@ -21,6 +31,13 @@ main {
             flex-direction: column;
             align-items: center;
         }
+    }
+
+    .other-section {
+        grid-area: other-section;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }
