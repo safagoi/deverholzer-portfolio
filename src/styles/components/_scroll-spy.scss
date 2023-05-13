@@ -1,18 +1,23 @@
 .ScrollSpy {
     grid-area: scroll-spy;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
     ul {
-        height: 100%;
-        position: relative;
+        height: 30rem;
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
         list-style: none;
-
+        
         &:before {
             position: absolute;
             content: "";
             width: 5px;
             height: 100%;
             background-color: var(--scroll-spy-color);
-            right: 5px;
+            // right: 5px;
             bottom: 0;
             border-radius: 10px;
         }
@@ -34,8 +39,8 @@
                 content: "";
                 height: 15px;
                 width: 15px;
+                right: -10px;
                 border-radius: 50%;
-                right: 0;
                 background-color: var(--scroll-spy-color);
             }
 

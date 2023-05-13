@@ -4,7 +4,7 @@ import ScrollSpy from '@/components/ScrollSpy';
 import getProjects from '@/lib/getProjects';
 import Head from 'next/head';
 
-export default function Home({projects}) {
+export default function Home({ projects }) {
 
   return (
     <>
@@ -18,32 +18,37 @@ export default function Home({projects}) {
       <Layout>
         <main>
           <div className="main-content">
-            
-            <section className="side-projects">
-              <h3>Some of my side projects</h3>
 
-              <div className="project-list">
-                {
-                  projects.map(project => 
-                    <ProjectCard 
-                      project={project}
-                      key={project.id}
-                    />
-                  )
-                }
-              </div>
-            </section>
+            <div className="sections-container">
+              <section className="side-projects">
+                <h3>Some of my side projects</h3>
 
-            
+                <div className="project-list">
+                  {
+                    projects.map(project =>
+                      <ProjectCard
+                        project={project}
+                        key={project.id}
+                      />
+                    )
+                  }
+                </div>
+              </section>
 
-            <section className="other-section">
-              <p>Esto es otra sección</p>
-            </section>
+              <section className="other-section">
+                <p>Esto es otra sección</p>
+              </section>
 
-            {/* ScrollSpy */}
-            <ScrollSpy />
+              <section className="another-section">
+                <p>Y esto es otra sección</p>
+              </section>
+            </div>
+
+
           </div>
+
         </main>
+        <ScrollSpy />
       </Layout>
     </>
   )
