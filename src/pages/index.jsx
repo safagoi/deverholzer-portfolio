@@ -18,7 +18,6 @@ export default function Home({ projects }) {
       <Layout>
         <main>
           <div className="main-content">
-
             <div className="sections-container">
               <section className="side-projects">
                 <h3>Some of my side projects</h3>
@@ -43,8 +42,6 @@ export default function Home({ projects }) {
                 <p>Y esto es otra sección</p>
               </section>
             </div>
-
-
           </div>
 
         </main>
