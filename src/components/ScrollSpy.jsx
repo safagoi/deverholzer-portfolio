@@ -10,6 +10,9 @@ export default function ScrollSpy() {
                 <li>
                     <span>Other section</span>
                 </li>
+                <li>
+                    <span>Another section</span>
+                </li>
             </ul>
         </div>
     )
